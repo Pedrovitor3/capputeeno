@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { SearchIcon } from './icons/search-icon';
 import { InputHTMLAttributes } from 'react';
+import { useFilter } from '@/hooks/useFilter';
 
 
 export const PrimaryInput = styled.input`
@@ -31,13 +32,16 @@ export const PrimaryInput = styled.input`
       transform: translateY(-50%);
     }
   `
-  interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+  interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    value: string;
+    handleChange: (value:string) => void;
+  }
 
 
   export function PrimaryInputSearch(props: InputProps) {
     return (
         <InputContainer>
-           <PrimaryInput {...props}/>
+           <PrimaryInput onChange={(event) => props.handleChange(event.target.value)} {...props}/>
            <SearchIcon />
         </InputContainer>
     )

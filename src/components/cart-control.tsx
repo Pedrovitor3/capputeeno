@@ -7,7 +7,7 @@ const CartCount = styled.span`
     width: 17px;
     height: 17px;
     border-radius: 100%;
-    padding: 0 5px;
+    padding: 0  5px;
     font-size: 10px;
 
     background-color: var(--delete-color);
@@ -28,7 +28,7 @@ export function CartControl() {
   return (
     <Container> 
       <CartIcon />
-      {value.length && <CartCount>{value.length}</CartCount>}
+      {value.length > 0 && <CartCount>{value.length}</CartCount>}
     </Container>
   )
 }

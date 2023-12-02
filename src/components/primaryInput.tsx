@@ -19,7 +19,7 @@ export const PrimaryInput = styled.input`
   line-height: 20px;
   color: var(--text-dark);
 
-  @media (min-width: ${props => props.theme.tableBreakpoint}) {
+  @media (min-width: ${props => props.theme.desktopBreakpoint}) {
     font-size: 14px;
     line-height: 22px;
 
@@ -38,7 +38,7 @@ export const PrimaryInput = styled.input`
       transform: translateY(-50%);
     }
 
-    @media (min-width: ${props => props.theme.tableBreakpoint}) {
+    @media (min-width: ${props => props.theme.desktopBreakpoint}) {
       width: 352px;
     }
   `
